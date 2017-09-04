@@ -7,7 +7,7 @@ bot.login(token);
 
 bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
-	if(resu=== "salut"||"hello"||"hi"){
+	if(resu=== "salut"||resu==="hello"||resu==="hi"){
 	mes.reply("salut a toi!");
 	}
 	if (resu.startsWith("id")) {
