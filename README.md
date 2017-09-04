@@ -1,2 +1,4 @@
 # emilia-bot
-bot discord
+toujourd en creation
+#patiente svp
+
