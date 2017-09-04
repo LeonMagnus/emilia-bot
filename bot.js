@@ -1,4 +1,3 @@
-'use strict';
 //importe discord +fs(file system)
 const Discord = require("discord.js");
 var bot = new Discord.Client();
