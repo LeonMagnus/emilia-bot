@@ -1,0 +1,2 @@
+# emilia-bot
+bot discord
