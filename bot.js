@@ -12,7 +12,7 @@ bot.on('message', mes => {
 	}
 	if (resu.startsWith("id")) {
 		if(resu==="id")
-			mes.channel.send(mes.mentions.users.id);
+			mes.channel.send(mes.author.id);
 		else if(mes.mentions.users.first())
 		mes.channel.send(mes.mentions.users.first().id);
 	};
