@@ -7,8 +7,13 @@ bot.login(token);
 
 bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
-
+	if(resu=== "salut"||"hello"||"hi"){
+	mes.reply("salut a toi!");
+	}
 	if (resu.startsWith("id")) {
+		if(resu==="id")
+			mes.channel.send(mes.mentions.users.id);
+		else
 		mes.channel.send(mes.mentions.users.first().id);
 	};
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
