@@ -1,6 +1,6 @@
 'use strict';
 //importe discord +fs(file system)
-const Discord = require("Discord.js");
+const Discord = require("discord.js");
 var bot = new Discord.Client();
 //importe les information
 const dis = require("./discution.json");
