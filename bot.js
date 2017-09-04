@@ -13,7 +13,7 @@ bot.on('message', mes => {
 	if (resu.startsWith("id")) {
 		if(resu==="id")
 			mes.channel.send(mes.mentions.users.id);
-		else
+		else(mes.mentions.users.first())
 		mes.channel.send(mes.mentions.users.first().id);
 	};
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
