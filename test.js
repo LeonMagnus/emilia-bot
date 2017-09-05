@@ -1,6 +1,6 @@
 
 
 
-this loli = function(mes){
+this.loli = function(mes){
 mes.reply("niko nyy");
 }
