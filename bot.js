@@ -20,5 +20,5 @@ bot.on('message', mes => {
 		mes.channel.send(mes.mentions.users.first().id);
 	};
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
-	if(resu=="/loli"){test.loli(mes);}
+	if(resu==="/loli"){test.loli(mes);}
 });
