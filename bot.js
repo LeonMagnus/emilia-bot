@@ -40,7 +40,7 @@ depart=i+1; }
 if( i == (entre.length-1))
 phrase.push(entre.substring(depart,(i+1)));
 }
-if(phrase[1]==='<@' + personne +'>')
+if(phrase[1]==='<@' + personne +'>' && phrase.length===2)
 return true;
 else 
 return false;
