@@ -1,6 +1,9 @@
 var Discord = require("discord.js");
 var bot = new Discord.Client();
 
+var test=require("./test.js")
+
+
 var token = process.env.Discord_token ||  process.argv[2];
 bot.login(token);
 //les message 
@@ -17,4 +20,5 @@ bot.on('message', mes => {
 		mes.channel.send(mes.mentions.users.first().id);
 	};
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
+	if(resu=="/loli"){test.loli(mes);}
 });
