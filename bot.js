@@ -13,6 +13,9 @@ bot.login(token);
 
 bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
+	
+	
+	
 	if(resu=== "salut"||resu==="hello"||resu==="hi"){
 	mes.reply("salut a toi!");
 	}
@@ -22,8 +25,18 @@ bot.on('message', mes => {
 		else if(decoupe(resu,mes.mentions.users.first().id))
 		mes.channel.send(mes.mentions.users.first().id);
 	};
+	
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
+	
+	
 	if(resu==="/loli"){test.loli(mes);}
+	
+	
+	if(resu==="/man"){
+		mes.reply("<@210357283253780480>");
+	}
+	
+	
 	if(resu==="/datejp"){mes.channel.send(date.toLocaleDateString("ja-JP"));}
 });
 //function par me
