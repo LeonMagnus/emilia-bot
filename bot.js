@@ -19,10 +19,30 @@ bot.on('message', mes => {
 	if (resu.startsWith("id")) {
 		if(resu==="id")
 			mes.channel.send(mes.author.id);
-		else if(resu.substring(1)==mes.mentions.users.first())
+		else if(decoupe(resu,mes.mentions.users.first()))
 		mes.channel.send(mes.mentions.users.first().id);
 	};
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
 	if(resu==="/loli"){test.loli(mes);}
 	if(resu==="/datejp"){mes.channel.send(date.toLocaleDateString("ja-JP"));}
 });
+//function par me
+function decoupe(entre,personne){
+var phrase=[];
+var depart=0;
+{for(var i=0;i<entre.length;i++){
+
+if(entre[i]==" "){
+
+phrase.push(entre.substring(depart,i));
+depart=i+1; }
+
+if( i == (entre.length-1))
+phrase.push(entre.substring(depart,(i+1)));
+}
+if(phrase[1]==='<@' + personne +'>')
+return true;
+else 
+return false;
+}
+}
