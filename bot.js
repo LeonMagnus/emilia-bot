@@ -1,5 +1,7 @@
-var Discord = require("discord.js");
-var bot = new Discord.Client();
+const Discord = require("discord.js");
+const bot = new Discord.Client();
+const fs=require("fs");
+
 
 var test=require("./test.js")
 
