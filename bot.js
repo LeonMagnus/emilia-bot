@@ -23,4 +23,5 @@ bot.on('message', mes => {
 	};
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
 	if(resu==="/loli"){test.loli(mes);}
+	if(resu==="/datejp"){mes.channel.send(date.toLocaleDateString("ja-JP"));}
 });
