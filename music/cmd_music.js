@@ -160,12 +160,12 @@ var commands = [
 function get_video_id(entre) {
 	var regex = /(?:\?v=|&v=|youtu\.be\/)(.*?)(?:\?|&|$)/;
 	var matches = entre.match(regex);
-	if(matches) {
+	if(matches)
 		return matches[1];
-	} else {
+	else 
 		return entre;
-	}
 }
+
 //ajoute a la playlist
 function add_queue(video, message, mute = false) {
 
@@ -177,14 +177,12 @@ function add_queue(video, message, mute = false) {
 			console.log("Error (" + video_id + "): " + error);
 		} else {
 			queue.push({titre: info["title"], id: video_id, user: message.author.username});
-			if (!mute) {
+			if (!mute)
 				message.reply('"' + info["title"] + '" a ete ajoue a la queue.');
-			}
-			if(!arret && !is_bot_playing() && queue.length === 1) {
+			if(!arret && !is_bot_playing() && queue.length === 1) 
 				play_next_song();
-			}
-		}
-	});
+		}});
+}
 
 //le bot joue encore ?
 function is_bot_playing() {
@@ -219,11 +217,9 @@ function play_next_song() {
 	voice_handler.once("end", reason => {
 		voice_handler = null;
 		bot.user.setGame();
-		if(!stopped && !is_queue_empty()) {
+		if(!stopped && !is_queue_empty())
 			play_next_song();
-		}
 	});
-
 	queue.splice(0,1);
 }
 
