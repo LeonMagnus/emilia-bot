@@ -117,7 +117,9 @@ return false;
 this.cmd=function(mes,text){
 var parm=text.split(" ");
 var cmd=recherche_cmd(parm[0]);
+mes.channel.send(cmd);
 if(cmd){
+mes.channel.send("cool");
 if(parm.length - 1 < cmd.parameters.length)
 mes.reply("je manque de parametre !!!");
 else
