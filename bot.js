@@ -22,7 +22,7 @@ bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
 	
 	if(resu.startsWith("/music")){
-		music.cmd(mes,resu.substring(1));
+		music.cmd(mes,resu.substring(7));
 	}
 	
 	if(resu=== "salut"||resu==="hello"||resu==="hi"){
