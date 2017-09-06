@@ -106,7 +106,7 @@ var commands = [
 
 
 //cette fonction cherche si la cmd exisiste
-function recherche_cmd(cmd){
+function recherche_cmd(mes,cmd){
 mes.channel.send(commands.length);
 for(var i=0 ; i<commands.length ; i++)
 if(cmd==commands[i].command)
@@ -117,7 +117,7 @@ return false;
 //pour lire les cmd 
 this.cmd=function(mes,text){
 var parm=text.split(" ");
-var cmd=recherche_cmd(parm[0]);
+var cmd=recherche_cmd(mes,parm[0]);
 mes.channel.send(cmd);
 if(cmd){
 mes.channel.send("cool");
