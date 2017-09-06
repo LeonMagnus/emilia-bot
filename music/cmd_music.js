@@ -6,7 +6,7 @@ var commands = [
 		description: "arret la playlist et il sort de la music qui est entrein de joue)",
 		parameters: [],
 		execute:function(mes,parm){
-    mes.chanel.send("en cour");
+    mes.channel.send("en cour cmd 1");
     }    
 },
 
@@ -17,7 +17,7 @@ var commands = [
 		description: "Resumes playlist",
 		parameters: [],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 2");}
 },
 
 //3er cmd
@@ -27,7 +27,7 @@ var commands = [
         description: "ajoute la video demande a la queue de la playlist",
         parameters: [],
         execute:function(mes,parm){
-        mes.chanel.send("en cour");}
+        mes.channel.send("en cour cmd 3");}
 },
 
 //4er cmd
@@ -37,7 +37,7 @@ var commands = [
 		description: "affiche la music qui est en cour",
 		parameters: [],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 4");}
 },
 
 //5er cmd
@@ -47,7 +47,7 @@ var commands = [
 		description: "sort de la music en cours",
 		parameters: [],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 5");}
 	},
 
 //6eme cmd
@@ -57,7 +57,7 @@ var commands = [
 		description: "affiche laqueue",
 		parameters: [],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 6");}
 	},
 
 //7eme cmd
@@ -67,7 +67,7 @@ var commands = [
 		description: "enleve toute les music de la que",
 		parameters: [],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 7");}
 	},
 
 //8eme cmd
@@ -77,7 +77,7 @@ var commands = [
 		description: "suprime une music de la queue avec un index ou le dernier(last)",
 		parameters: ["Request index or 'last'"],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 8");}
 	},
   
 //9eme cmd  
@@ -87,10 +87,10 @@ var commands = [
 		description: "affiche la description de la commande",
 		parameters: [],
 		execute: function(mes,parm){
-    mes.chanel.send("en cour");}
+    mes.channel.send("en cour cmd 9");}
 },
 
-//9eme cmd  
+//10eme cmd  
 
 {
 		command: "help",
@@ -98,8 +98,29 @@ var commands = [
 		parameters: [],
 		execute: function(mes,parm){
    for(var i=0;i<commands.length;i++)
-	mes.chanel.send(`${commands[i].command} --> ${commands[i].description}`);}
+	mes.channel.send(`${commands[i].command} --> ${commands[i].description}`);}
 }
 ]
 //les fonction qui sont assosier avec les cmd
 
+
+}
+//cette fonction cherche si la cmd exisiste
+function recherche_cmd(cmd){
+for(var i=0 ; i<commands.length ; i++)
+if(cmd==commands[i].command)
+return commands[i];
+return false;
+}
+
+//pour lire les cmd 
+this.cmd=function(text){
+var parm=text.split(" ");
+var cmd=recherche_cmd(parm[0]);
+if(cmd){
+if(parm.length - 1 < cmd.parametres.length)
+console.log("je manque de parametre !!!");
+else
+cmd.exucute();
+}
+	
