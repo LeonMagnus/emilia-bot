@@ -106,7 +106,7 @@ var commands = [
 
 }
 //cette fonction cherche si la cmd exisiste
-function recherche_cmd(cmd){
+this.recherche_cmd=function(cmd){
 for(var i=0 ; i<commands.length ; i++)
 if(cmd==commands[i].command)
 return commands[i];
