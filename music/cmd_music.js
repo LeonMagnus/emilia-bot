@@ -123,4 +123,5 @@ mes.reply("je manque de parametre !!!");
 else
 cmd.exucute(mes,parm);
 }
+}
 	
