@@ -122,7 +122,7 @@ if(cmd){
 if(parm.length - 1 < cmd.parametres.length)
 mes.reply("je manque de parametre !!!");
 else
-cmd.exucute(mes,parm);
+cmd.execute(mes,parm);
 }
 }
 	
