@@ -22,6 +22,7 @@ bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
 	
 	if(resu.startsWith("/music")){
+		mes.channel.send("ok");
 		music.cmd(mes,resu.substring(1));
 	}
 	
