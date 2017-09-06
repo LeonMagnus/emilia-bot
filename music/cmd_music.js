@@ -1,4 +1,4 @@
-const ytdl = require("ytdl-core");
+const ytdl = null //require("ytdl-core");
 
 //variable
 var arret = false;
