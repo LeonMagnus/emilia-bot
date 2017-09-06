@@ -115,7 +115,7 @@ return false;
 
 //pour lire les cmd 
 this.cmd=function(mes,text){
-	mes.channel.send("je marche dans la function");
+	mes.channel.send(text);
 var parm=text.split(" ");
 var cmd=recherche_cmd(parm[0]);
 if(cmd){
