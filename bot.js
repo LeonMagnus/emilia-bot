@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs=require("fs");
+const ytdl = require("ytdl-core");
+
 
 var test=require("./test.js")
 
