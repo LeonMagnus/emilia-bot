@@ -114,13 +114,13 @@ return false;
 }
 
 //pour lire les cmd 
-this.cmd=function(text){
+this.cmd=function(mes,text){
 var parm=text.split(" ");
 var cmd=recherche_cmd(parm[0]);
 if(cmd){
 if(parm.length - 1 < cmd.parametres.length)
-console.log("je manque de parametre !!!");
+mes.reply("je manque de parametre !!!");
 else
-cmd.exucute();
+cmd.exucute(mes,parm);
 }
 	
