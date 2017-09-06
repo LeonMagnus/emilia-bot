@@ -103,15 +103,14 @@ var commands = [
 				response = "queue vide";
 			else {
 				var long_queue = queue.length > 30;
-				for(var i = 0; i < (long_queue ? 30 : queue.length); i++) {
-					response += "*"" + queue[i]["titre"] + "->" (demande par " + queue[i]["user"] + ")\n";
+				for(var i = 0; i < (long_queue ? 30 : queue.length); i++)
+					response += "*" + queue[i]["titre"] + "->(demande par " + queue[i]["user"] + ")\n";
 				}
 
-				if(long_queue) response += "\n**...et " + (queue.length - 30) + " plus(alors stoppppp).**";
-			}
-			
+				if(long_queue) 
+	response += "\n...et " + (queue.length - 30) + " plus(alors stoppppp)hmmmmm";
 			mes.reply(response);
-		}}
+		}
 	},
 
 //7eme cmd
