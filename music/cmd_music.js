@@ -107,7 +107,7 @@ var commands = [
 
 //cette fonction cherche si la cmd exisiste
 function recherche_cmd(mes,cmd){
-mes.channel.send(commands.length);
+mes.channel.send(cmd);
 for(var i=0 ; i<commands.length ; i++)
 if(cmd==commands[i].command)
 return commands[i];
