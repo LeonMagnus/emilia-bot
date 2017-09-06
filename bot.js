@@ -4,14 +4,17 @@ const fs=require("fs");
 
 var test=require("./test.js")
 
-//recupe le token 
-var token = process.env.Discord_token ||  process.argv[2];
-
 //importe les commande de music
 const music=require("./music/cmd_music.js");
 
 
 var prefix="/";
+
+
+//recupe le token 
+var token = process.env.Discord_token ||  process.argv[2];
+
+
 
 
 bot.login(token);
