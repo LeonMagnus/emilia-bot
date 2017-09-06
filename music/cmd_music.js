@@ -1,5 +1,4 @@
-const ytdl = require("ytdl-core");
-const request = require("request");
+const ytdl = require("ytdl");
 
 
 //variable
