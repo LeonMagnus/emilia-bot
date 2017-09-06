@@ -8,8 +8,6 @@ var test=require("./test.js")
 const music=require("./music/cmd_music.js");
 
 
-var prefix="/";
-
 
 //recupe le token 
 var token = process.env.Discord_token ||  process.argv[2];
@@ -23,7 +21,7 @@ bot.login(token);
 bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
 	
-	if(resu.startsWith(prefix+"music")){
+	if(resu.startsWith("/music")){
 		music.cmd(mes,resu.substring(1));
 	}
 	
