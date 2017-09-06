@@ -107,7 +107,6 @@ var commands = [
 
 //cette fonction cherche si la cmd exisiste
 function recherche_cmd(mes,cmd){
-mes.channel.send(cmd);
 for(var i=0 ; i<commands.length ; i++)
 if(cmd==commands[i].command)
 return commands[i];
@@ -120,7 +119,6 @@ var parm=text.split(" ");
 var cmd=recherche_cmd(mes,parm[0]);
 mes.channel.send(cmd);
 if(cmd){
-mes.channel.send("cool");
 if(parm.length - 1 < cmd.parameters.length)
 mes.reply("je manque de parametre !!!");
 else
