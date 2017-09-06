@@ -1,8 +1,9 @@
 const ytdl = require("ytdl-core");
+const request = require("request");
+
 
 //variable
 var arret = false;
-
 
 var voice_connection = null;
 var text_channel = null;
