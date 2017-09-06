@@ -55,7 +55,7 @@ var commands = [
             if (match && match[2])
                 queue_playlist(match[2], mes);
              else 
-                add_to_queue(parm[1], mes);
+                add_queue(parm[1], mes);
         }
 },
 
