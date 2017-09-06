@@ -74,7 +74,7 @@ var commands = [
 				response += "rien";
 
 			mes.reply(response);
-		}}
+		}
 },
 
 //5er cmd
