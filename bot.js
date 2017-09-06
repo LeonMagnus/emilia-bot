@@ -8,7 +8,7 @@ var test=require("./test.js")
 var token = process.env.Discord_token ||  process.argv[2];
 
 //importe les commande de music
-const test=require("./music/cmd_music.js");
+const music=require("./music/cmd_music.js");
 
 
 var prefix="/";
