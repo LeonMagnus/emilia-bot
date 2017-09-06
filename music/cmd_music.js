@@ -118,7 +118,7 @@ this.cmd=function(mes,text){
 var parm=text.split(" ");
 var cmd=recherche_cmd(parm[0]);
 if(cmd){
-if(parm.length - 1 < cmd.parametres.length)
+if(parm.length - 1 < cmd.parameters.length)
 mes.reply("je manque de parametre !!!");
 else
 cmd.execute(mes,parm);
