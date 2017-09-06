@@ -69,7 +69,7 @@ var commands = [
 		execute: function(mes,parm){
     		var response = "il joue: ";
 			if(is_bot_playing()) 
-				response += " " + now_playing_data["titre"] + "-->" (demande par " + now_playing_data["user"] + ")";
+				response += " " + now_playing_data["titre"] + "--> (demande par " + now_playing_data["user"] + ")";
 			else
 				response += "rien";
 
