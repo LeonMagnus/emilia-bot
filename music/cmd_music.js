@@ -89,7 +89,8 @@ var commands = [
 				voice_handler.end();
 			} else 
 				mes.reply("ya rien qui joue");
-	},
+		}
+},
 
 //6eme cmd
 
@@ -108,10 +109,10 @@ var commands = [
 				}
 
 				if(long_queue) 
-	response += "\n...et " + (queue.length - 30) + " plus(alors stoppppp)hmmmmm";
-			mes.reply(response);
+				response += "\n...et " + (queue.length - 30) + " plus(alors stoppppp)hmmmmm";
+				mes.reply(response);
 		}
-	},
+},
 
 //7eme cmd
 
