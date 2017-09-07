@@ -1,10 +1,11 @@
 //on utilise user.json
+var user= require("./user.json");
 var data = {
 	badge:[
 	]
 	};
 const fs = require("fs");
-var datas = fs.readFileSync(user.json);
+var datas = fs.readFileSync(user);
 data = JSON.parse(datas);
 
 
