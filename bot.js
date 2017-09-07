@@ -7,7 +7,6 @@ var test=require("./test.js")
 
 //importe les commande de music
 const music=require("./music/cmd_music.js");
-const badge=require("./badge/badge.js");
 
 
 //recupe le token 
@@ -20,13 +19,6 @@ bot.login(token);
 bot.on('message', mes => {
 	var resu = mes.content.toLowerCase();
 	
-	if (resu === prefix + "affiche"){
-	badge.aff(res,mes);
-	}
-	
-	if(resu.startsWith(prefix + "badge")) {
-	badge.action(res,mes)
-}
 	if(resu.startsWith("/music")){
 		music.cmd(mes,resu.substring(7));
 	}
