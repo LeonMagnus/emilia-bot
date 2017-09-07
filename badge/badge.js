@@ -8,10 +8,40 @@ var datas = fs.readFileSync("user.json");
 data = JSON.parse(datas);
 
 
+this.action=function(res,mes){
+		var i;
+		if (resu === prefix + "badge")
+			for (i = 0; i < data.badge.length; i++) {
+				if (data.badge[i].userid === mes.author.id) {
+					affuser(mes);
+					break;
+				}
+				if (i == (data.badge.length - 1)) {
+					adduser(mes);
+					break;
+				}
+			}
+		else if (mes.mentions.users.first()) 
+		for (i = 0; i < data.badge.length; i++) {
+			if (data.badge[i].userid === mes.mentions.users.first().id) {
+				affusermen(mes)
+				break;
+			}
+			if ((i == data.badge.length - 1)){
+				addusermen(mes); 
+				break;
+			}
+			}
+		else mes.channel.send("pk menvoyer un message");
+		mes.channel.send("et i="+i);
+	};
 
 
-
-
+this.aff=function(res,mes) {
+		for (var l in data.badge) {
+			mes.channel.send(data.badge[l].userid);
+		}
+	};
 
 
 
