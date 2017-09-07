@@ -4,7 +4,7 @@ var data = {
 	]
 	};
 const fs = require("fs");
-var datas = fs.readFileSync("./user.json");
+var datas = fs.readFileSync("https://github.com/flad1997/emilia-bot/blob/master/badge/user.json");
 data = JSON.parse(datas);
 
 
