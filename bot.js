@@ -14,8 +14,6 @@ const music=require("./music/cmd_music.js");
 var token = process.env.Discord_token ||  process.argv[2];
 
 
-
-
 bot.login(token);
 //les message 
 
@@ -38,17 +36,12 @@ bot.on('message', mes => {
 	
 	if (resu === "avatar") { mes.reply(mes.author.avatar); };
 	
-	
-	if(resu==="/loli"){test.loli(mes);}
-	
-	
 	if(resu==="/man"){
 		mes.reply("<@210357283253780480>");
 	}
-	
-	
-	if(resu==="/datejp"){mes.channel.send(date.toLocaleDateString("ja-JP"));}
 });
+
+bot.on('guildMemberAdd', guilds => {guilds.guild.defaultChannel.send(`${guilds.user.username} vien de rejoind le salon`);});
 //function par me
 function decoupe(entre,personne){
 var phrase=[];
