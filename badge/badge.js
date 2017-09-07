@@ -46,7 +46,7 @@ this.aff=function(res,mes) {
 
 
 
-/fonction qui ajoute un utilisateur sur le fichier json
+//fonction qui ajoute un utilisateur sur le fichier json
 //moi
 this.adduser=function(mes) {
 	data.badge.push({ userid: mes.author.id, badpos: [] });
