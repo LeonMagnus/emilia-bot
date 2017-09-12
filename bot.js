@@ -87,7 +87,7 @@ bot.on('guildMemberAdd', guilds => {guilds.guild.defaultChannel.send(`${guilds.u
 function decoupe(entre,personne){
 var phrase=[];
 var depart=0;
-{for(var i=0;i<entre.length;i++){
+for(var i=0;i<entre.length;i++){
 
 if(entre[i]==" "){
 
