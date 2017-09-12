@@ -13,8 +13,8 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
     .query('SELECT table_schema,table_name FROM information_schema.tables;')
     .on('row', function(row) {
       console.log(JSON.stringify(row));
-    });*/
-});
+    });
+});*/
 
 //fichier ou enrigistre les lvl 
 var lvl = require("./lvl.json");
