@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "bot discord",
   "main": "bot.js",
-  
-  
-  
   "dependencies": {
+    "node-opus" : "^0.2.1",
     "discord.js": "^11.1.0",
     "postgres":"^7.3.0",
     "ytdl-core":"^0.17.1"
