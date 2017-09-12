@@ -6,7 +6,6 @@
   "dependencies": {
     "ytdl-core" :  "^v0.17.1",
     "discord.js": "^11.2.0",
-    "pg":"^v7.3.0"
   },
   "devDependencies": {},
   "scripts": {
