@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const ytdl = require('ytdl-core');
 //base de donne
-var pg = require('pg');
+/*var pg = require('pg');
 
 pg.defaults.ssl = true;
 pg.connect(process.env.DATABASE_URL, function(err, client) {
