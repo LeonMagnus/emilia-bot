@@ -4,8 +4,8 @@
   "description": "bot discord",
   "main": "bot.js",
   "dependencies": {
-    "ytdl-core" :  "github:fent/node-ytdl-core#master",
-    "discord.js": "^11.1.0"
+    "ytdl-core" :  "^v0.17.1",
+    "discord.js": "^11.2.0"
   },
   "devDependencies": {},
   "scripts": {
