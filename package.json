@@ -5,8 +5,8 @@
   "main": "bot.js",
   "dependencies": {
     "discord.js": "^11.1.0",
-    "pg.js":"^7.3.0",
-    "ytdl-core":"^0.17.1"
+    "node-postgres":"^7.3.0",
+    "node-ytdl-core":"^0.17.1"
   },
   "devDependencies": {},
   "scripts": {
