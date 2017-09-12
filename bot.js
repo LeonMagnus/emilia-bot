@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
-
+const pg = require('pg');
 //fichier ou enrigistre les lvl 
 var lvl = require("./lvl.json");
 var data = {};
